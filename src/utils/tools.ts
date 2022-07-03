@@ -47,3 +47,17 @@ export const removeToken = () => {
 export const CopyText = (text: string) => {
   copy(text);
 };
+
+export const Md5 = (message: string): string => {
+  if (window.mo7Md5) {
+    return window.mo7Md5(message);
+  }
+  return message;
+};
+
+export const Encrypt = (message: string): string => {
+  if (window.mo7Encrypt) {
+    return window.mo7Encrypt(message);
+  }
+  return message;
+};

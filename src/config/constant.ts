@@ -1,1 +1,3 @@
-export const Logo = '//file.mo7.cc/static/logo/512.png';
+import logo from '@/assets/svg/logo.svg';
+
+export const Logo = logo;

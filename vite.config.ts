@@ -21,23 +21,23 @@ const PwaConfig = {
     lang: 'zh',
     icons: [
       {
-        src: '//file.mo7.cc/static/lxh_png/2.png',
+        src: '/mo7cc.svg',
         sizes: '192x192',
         type: 'image/png',
       },
       {
-        src: '//file.mo7.cc/static/lxh_png/2.png',
+        src: '/mo7cc.svg',
         sizes: '512x512',
         type: 'image/png',
       },
       {
-        src: '//file.mo7.cc/static/lxh_png/2.png',
+        src: '/mo7cc.svg',
         sizes: '192x192',
         type: 'image/png',
         purpose: 'maskable',
       },
       {
-        src: '//file.mo7.cc/static/lxh_png/2.png',
+        src: '/mo7cc.svg',
         sizes: '512x512',
         type: 'image/png',
         purpose: 'maskable',
