@@ -1,4 +1,3 @@
-import '@/assets/js/VueDemo.net';
 import 'normalize.css';
 import '@/assets/css/global.less';
 

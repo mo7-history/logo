@@ -8,11 +8,6 @@ const routes = [
     component: HomeView,
   },
   {
-    path: '/login',
-    name: 'login',
-    component: () => import('@/pages/LoginPage.vue'),
-  },
-  {
     path: '/about',
     name: 'about',
     component: () => import('@/pages/About/IndexPage.vue'),
@@ -41,16 +36,6 @@ const routes = [
         component: () => import('@/pages/About/ReleaseNotes.vue'),
       },
     ],
-  },
-  {
-    path: '/daily_cover',
-    name: 'daily_cover',
-    component: () => import('@/pages/DailyCover.vue'),
-  },
-  {
-    path: '/personal',
-    name: 'personal',
-    component: () => import('@/pages/PersonalPage.vue'),
   },
   {
     path: '/:pathMatch(.*)',

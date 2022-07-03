@@ -51,9 +51,6 @@ const PwaConfig = {
 
 import AppPackage from './package.json';
 
-// const ProxyUrl = 'https://file.mo7.cc';
-const ProxyUrl = `http://127.0.0.1:${AppPackage.Port}`;
-
 // https://vitejs.dev/config/
 const pathSrc = path.resolve(__dirname, 'src');
 export default defineConfig({
@@ -78,19 +75,11 @@ export default defineConfig({
     ViteConst: JSON.stringify({
       AppVersion: AppPackage.version,
       AppName: AppPackage.name,
-      ProxyUrl,
     }),
   },
   server: {
     host: true,
     port: AppPackage.Port + 1,
     strictPort: true, // 端口已被占用则会直接退出
-    proxy: {
-      '/api': {
-        // 设置你调用的接口域名和端口号 别忘了加http
-        target: ProxyUrl,
-        changeOrigin: true, // 允许跨域
-      },
-    },
   },
 });

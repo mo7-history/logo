@@ -44,36 +44,6 @@ export const removeToken = () => {
   mStorage.clearAll();
 };
 
-import { getUserInfo } from '@/api/Account';
-import type { resDataType } from './utils.d';
-import { UserInfoStore } from '@/store';
-
-export const setToken = async (tokenStr: string) => {
-  mStorage.set('token', tokenStr);
-  return new Promise<resDataType>((resolve, reject) => {
-    const localToken = getToken();
-    if (localToken) {
-      getUserInfo().then((res) => {
-        if (res.Code > 0 && res.Data.UserID) {
-          UserInfoStore.update(res.Data);
-          resolve(res);
-        } else {
-          removeToken();
-          reject(res);
-        }
-      });
-    }
-  });
-};
-
 export const CopyText = (text: string) => {
   copy(text);
-};
-
-export const Md5 = (message: string): string => {
-  return window.mo7Md5(message);
-};
-
-export const Encrypt = (message: string): string => {
-  return window.mo7Encrypt(message);
 };

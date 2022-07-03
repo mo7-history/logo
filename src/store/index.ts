@@ -39,47 +39,9 @@ export const UserInfoStore = reactive({
   },
 });
 
-// ===================== PingData ============================
-
-export interface AppInfo {
-  Port: number;
-  name: string;
-  version: string;
-}
-
-export interface PingDataType {
-  AppInfo: AppInfo;
-  ContentType: string;
-  FullPath: string;
-  Method: 'POST' | 'GET' | '';
-  ResParam: any;
-  Token: string;
-  UserAgent: string;
-}
-
-const PingData: PingDataType = {
-  AppInfo: {
-    Port: 0,
-    name: '',
-    version: '',
-  },
-  ContentType: '',
-  FullPath: '',
-  Method: '',
-  ResParam: {},
-  Token: '',
-  UserAgent: '',
-};
-export const PingDataStore = reactive({
-  value: PingData,
-  update(data: PingDataType) {
-    this.value = data;
-  },
-});
-
 // ===================== Loading ============================
 export const LoadingStore = reactive({
-  status: true,
+  status: false,
   open() {
     this.status = true;
   },

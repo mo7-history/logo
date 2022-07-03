@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TopBarStore, UserInfoStore, PingDataStore } from '@/store';
+import { TopBarStore, UserInfoStore } from '@/store';
 import { RouterLink } from 'vue-router';
 import XIcon from '@/lib/XIcon.vue';
 import PWAInstall from '@/lib/PWAInstall.vue';
@@ -38,28 +38,6 @@ const showDrawer = () => {
           </div>
 
           <div className="TopBar__item">
-            <RouterLink to="/daily_cover" class="item_btn">
-              <n-button text size="tiny">
-                <template #icon>
-                  <XIcon name="PictureOutlined" />
-                </template>
-                每日一图
-              </n-button>
-            </RouterLink>
-          </div>
-
-          <div className="TopBar__item" v-if="!UserInfoStore.value.UserID">
-            <RouterLink to="/login" class="item_btn">
-              <n-button text size="tiny">
-                <template #icon>
-                  <XIcon name="LoginOutlined" />
-                </template>
-                Login
-              </n-button>
-            </RouterLink>
-          </div>
-
-          <div className="TopBar__item">
             <RouterLink to="/" class="item_btn">
               <n-button text size="tiny">
                 <template #icon>
@@ -91,9 +69,6 @@ const showDrawer = () => {
             </n-button>
             <div class="TopBar__version">
               <span> 当前版本: {{ ViteConst.AppVersion }} </span>
-              <span v-if="ViteConst.AppVersion !== PingDataStore.value.AppInfo.version">
-                最新版本: {{ PingDataStore.value.AppInfo.version }}
-              </span>
             </div>
           </div>
         </template>
