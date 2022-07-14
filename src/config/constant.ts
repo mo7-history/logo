@@ -1,4 +1,4 @@
-import logo from '@/assets/svg/iMoney.svg';
+import logo from '@/assets/svg/dolphin.svg';
 
 document.getElementById('meta-icon').setAttribute('href', logo);
 
